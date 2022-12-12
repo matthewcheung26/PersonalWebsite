@@ -1,6 +1,9 @@
 import Head from 'next/head';
 import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillMail, AiFillLinkedin, AiFillGithub} from 'react-icons/ai';
+import Image from "next/image";
+import me from "../public/me.jpeg";
+
 
 export default function Home() {
   return (
@@ -12,33 +15,59 @@ export default function Home() {
       </Head>
 
       <main className="bg-white px-10 ">
-        <section className="min-h-screen">
-          <nav className="py-10 mb-12 flex justify-between">
+        <section className=' bg-gradient-to-r from-orange-400 to-indigo-400'>
+
+          <nav className="py-10 mb-20 flex justify-between">
             <h1 className="text-xl">Matthew Cheung</h1>
             <ul className="flex items-center">
-              <li>
-                <BsFillMoonStarsFill className="cursor-pointer text-2xl"/>
-              </li>
-              <li><a className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8'
+              <li><a className='bg-white  text-black px-4 py-2 rounded-md ml-8'
               href="#">Resume</a></li>
             </ul>
           </nav>
+
           <div className='text-center p-10'>
-            <h2 className='text-5xl py-2 text-teal-600 font-medium'>
+            <h2 className='text-7xl py-2 text-white font-medium'>
             Matthew Cheung
             </h2>
-            <h3 className='text-2xl py-2'>Software Engineering Student.</h3>
-            <p className='text-md py-5 leading-8 text-gray-800'>Aspiring software and web developer looking to 
+            <h3 className='text-2xl py-2 text-white '>Software Engineering Student.</h3>
+            <p className='text-md py-5 leading-8 text-gray-800'>Aspiring software engineer looking to 
               make a difference in our future.
             </p>
           </div>
-          <div className='text-5xl flex justify-center gap-16 py-3 text-gray-800'>
+
+          <div className='text-5xl flex justify-center gap-16 py-3 pb-7 text-gray-800'>
             <AiFillLinkedin />
             <AiFillGithub />
             <AiFillMail />
           </div>
           
         </section>
+        
+        <section>
+
+          <div className='w-full py-60 px-4'>
+            <div className='max-w-[1200px] mx-auto grid grid-cols-2'>
+
+              <Image className='w-[350px] mx-auto my-auto rounded-full'src={me} /> 
+              
+              <div className=' shadow-xl px-5 flex flex-col justify-center'>
+                <h3 className='text-3xl py-5 underline font-bold'>About me</h3>
+                <p className='text-md py-2 leading-8 text-gray-800 '>
+                  I'm a second year software engineering student @ McMaster university, 
+                  currently <span className=' text-indigo-400'>looking for Summer 2023 internships. </span>
+                  In the past I've worked at Code Ninjas as a Coding instructor, and have developed
+                  projects such as x and x. 
+                </p>
+                <p className='text-md py-2 leading-8 text-gray-800'>
+                  My current scope is small, but I hope to develop my skills and work on 
+                  intricate and expansive projects in the future.
+
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
       </main>
 
     </div>
