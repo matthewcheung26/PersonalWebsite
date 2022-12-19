@@ -15,39 +15,49 @@ export default function Home() {
       </Head>
 
       <main className="bg-white px-10 ">
-        <section className='pt-48 pb-48 w-screen bg-gradient-to-r from-[#ef6543] to-[#7a8cff] relative top-20 left-0 -ml-10'>
+        <section className='pt-48 pb-48 w-screen bg-gradient-to-r from-[#ef6543] to-[#7a8cff] relative top-[82.5px] left-0 -ml-10'>
 
-          <nav class="bg-white py-3 fixed w-full -top-1 left-0 border-b border-gray-200 backdrop-filter backdrop-blur-md bg-opacity-20">
-            <div class="container flex flex-wrap items-center justify-between mx-auto">
-            <div class="flex md:order-2">
-                <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3">Resume</button>
-                <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false">
-                  <span class="sr-only">Open main menu</span>
-                  <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          <nav className="bg-white py-3 fixed w-full -top-1 left-0 border-b border-gray-200 backdrop-filter backdrop-blur-md bg-opacity-20">
+            <div className="container flex flex-wrap items-center justify-between ml-[225px]">
+              <div className="flex order-2 mr-[225px]">
+                <ul className="flex flex-row p-4 px-7 mt-0 space-x-10 text-lg font-medium">
+                  <li>
+                    <a href="#" className="block text-gray-700 rounded hover:bg-gray-100 hover:bg-transparent hover:text-blue-700">Home</a>
+                  </li>
+                  <li>
+                    <a href="#" className="block text-gray-700 rounded hover:bg-gray-100 hover:bg-transparent hover:text-blue-700">About Me</a>
+                  </li>
+                  <li>
+                    <a href="#" className="block text-gray-700 rounded hover:bg-gray-100 hover:bg-transparent hover:text-blue-700">Projects</a>
+                  </li>
+                </ul>
+                  
+                <button type="button" className="text-white bg-[#b9779a] border-2 border-[#b9779a] hover:bg-transparent hover:text-black hover:border-black ease-in-out duration-300 rounded-lg font-medium text-lg px-3.5 h-11 mr-3 mt-[7.5px] text-center">
+                Resume
                 </button>
-            </div>
-            <div class="items-center justify-between flex w-auto order-1" id="navbar-sticky">
-              <ul class="flex flex-row p-4 mt-0 space-x-8 text-md font-medium">
-                <li>
-                  <a href="#" class="block py-2 pl-3 pr-4 bg-blue-700 rounded bg-transparent text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
-                </li>
-                <li>
-                  <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 ">About Me</a>
-                </li>
-                <li>
-                  <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 ">Projects</a>
-                </li>
-              </ul>
-            </div>
+
+              </div>
+
+              <div className="items-center justify-between flex w-auto order-1" id="navbar-sticky">
+                <ul className="flex flex-row p-4 mt-0 space-x-8 text-md font-small">
+                  <li>
+                    <a href="#" className="block py-2 pl-3 pr-4 text-gray-700 rounded md:p-0 ">Matthew Cheung · Sotware Engineering @ McMaster University</a>
+                  </li>
+                </ul>
+              </div>
+
             </div>
           </nav>
 
-          <div className='text-left ml-[180px] p-10'>
-            <h2 className='text-8xl py-2 text-white font-bold'>
+          <div className='text-left ml-[200px] p-10'>
+            <h2 className='text-[105px] py-2 text-white font-bold'>
             hi, i'm Matthew Cheung
             </h2>
-            <h3 className='text-3xl py-4 text-white '>a Software Engineering student at McMasterU.</h3>
+            <h3 className='text-3xl -mt-[10px] mb-[30px] text-white '>a Software Engineering student at McMasterU.</h3>
             
+            <button type="button" className="text-black bg-white hover:bg-transparent hover:text-white border-2 border-white ease-in-out duration-300 shadow-lg font-medium rounded-md text-2xl py-4 px-20">
+              click to view my resume
+            </button>
           </div>
           
         </section>
@@ -72,8 +82,8 @@ export default function Home() {
                 <p className='text-md py-2 leading-8 text-gray-800'>
                   My current scope is small, but I hope to develop my skills and work on 
                   intricate and expansive projects in the future.
-
                 </p>
+
               </div>
             </div>
           </div>
@@ -83,48 +93,51 @@ export default function Home() {
           <div className='py-64 px-4'>
             <div className='max-w-[1200px] mx-auto grid grid-cols-3'>
 
-              <div class="max-w-xs rounded overflow-hidden shadow-lg">
-                {/* <img class="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains"> */}
-                <div class="px-6 py-4">
-                  <div class="font-bold text-xl mb-2">Project 1</div>
-                  <p class="text-gray-700 text-base">
+              <div className="max-w-xs rounded overflow-hidden shadow-lg">
+                {/* <img className="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains"> */}
+                <div className="px-6 py-4">
+                  <div className="font-bold text-xl mb-2">Project 1</div>
+                  <p className="text-gray-700 text-base">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
                   </p>
                 </div>
-                <div class="px-6 pt-4 pb-2">
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Java</span>
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Python</span>
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Git</span>
+
+                <div className="px-6 pt-4 pb-2">
+                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Java</span>
+                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Python</span>
+                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Git</span>
                 </div>
               </div>
 
-              <div class="max-w-xs rounded overflow-hidden shadow-lg">
-                {/* <img class="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains"> */}
-                <div class="px-6 py-4">
-                  <div class="font-bold text-xl mb-2">Digital Logic Design</div>
-                  <p class="text-gray-700 text-base">
+              <div className="max-w-xs rounded overflow-hidden shadow-lg">
+                {/* <img className="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains"> */}
+                <div className="px-6 py-4">
+                  <div className="font-bold text-xl mb-2">Digital Logic Design</div>
+                  <p className="text-gray-700 text-base">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
                   </p>
                 </div>
-                <div class="px-6 pt-4 pb-2">
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Verilog</span>
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Verilog Simulations</span>
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Altera Software</span>
+
+                <div className="px-6 pt-4 pb-2">
+                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Verilog</span>
+                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Verilog Simulations</span>
+                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Altera Software</span>
                 </div>
               </div>
 
-              <div class="max-w-xs rounded overflow-hidden shadow-lg">
-                {/* <img class="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains"> */}
-                <div class="px-6 py-4">
-                  <div class="font-bold text-xl mb-2">Robotics Simulations</div>
-                  <p class="text-gray-700 text-base">
+              <div className="max-w-xs rounded overflow-hidden shadow-lg">
+                {/* <img className="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains"> */}
+                <div className="px-6 py-4">
+                  <div className="font-bold text-xl mb-2">Robotics Simulations</div>
+                  <p className="text-gray-700 text-base">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
                   </p>
                 </div>
-                <div class="px-6 pt-4 pb-2">
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Python</span>
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Quartus Software</span>
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Git</span>
+
+                <div className="px-6 pt-4 pb-2">
+                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Python</span>
+                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Quartus Software</span>
+                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Git</span>
                 </div>
               </div>
 
@@ -133,21 +146,20 @@ export default function Home() {
         </section>
 
         <section>
-          <div class="w-screen px-4 py-28 -ml-10 space-y-12 overflow-hidden bg-gradient-to-r from-orange-400 to-indigo-400">
-            <div class="text-6xl text-white flex justify-center mt-8 gap-16">
+          <div className="w-screen px-4 py-28 -ml-10 space-y-12 overflow-hidden bg-gradient-to-r from-orange-400 to-indigo-400">
+            <div className="text-6xl text-white flex justify-center mt-8 gap-16">
               <AiFillLinkedin />
               <AiFillGithub />
               <AiFillMail />
             </div>
 
-            <p class="text-base leading-6 text-center text-white">
+            <p className="text-base leading-6 text-center text-white">
                 made by matthew cheung, 2022.
             </p>
+
           </div>
         </section>
-
       </main>
-
     </div>
   );
 }
