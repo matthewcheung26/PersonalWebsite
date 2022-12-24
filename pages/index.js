@@ -19,9 +19,9 @@ export default function Home() {
       <main id="home" className="bg-white px-10">
         <section className='pt-[140px] pb-[160px] -ml-10 w-screen bg-gradient-to-r from-[#ef6543] to-[#7a8cff] relative top-[72px] left-0 '>
 
-          <nav className="bg-white py-2.5 fixed w-full -top-1 left-0 border-b border-gray-200 backdrop-filter backdrop-blur-md bg-opacity-20">
-            <div className="container flex flex-wrap items-center justify-between ml-[225px]">
-              <div className="flex order-2 mr-[240px]">
+          <nav className="bg-white py-2.5 fixed w-screen -top-1 border-b border-gray-200 backdrop-filter backdrop-blur-md bg-opacity-20">
+            <div className="container flex flex-wrap items-center justify-between mx-auto">
+              <div className="flex order-2">
                 <ul className="flex flex-row p-4 px-7 mt-0 space-x-8 text-[15px] font-medium">
                   <li>
                     <a href="#home" className="block text-gray-700 rounded hover:bg-gray-100 hover:bg-transparent hover:text-blue-700">Home</a>
@@ -41,9 +41,9 @@ export default function Home() {
               </div>
 
               <div className="items-center justify-between flex w-auto order-1" id="navbar-sticky">
-                <ul className="flex flex-row -ml-[15px] text-md font-small">
+                <ul className="flex flex-row text-md font-small">
                   <li>
-                    <a href="#home" className="block mt-[3px] -ml-[25px] py-2 pr-4 text-[13px] text-gray-700 rounded md:p-0 ">Matthew Cheung · Sotware Engineering @ McMaster University</a>
+                    <a href="#home" className="block mt-[3px] py-2 pr-4 text-[13px] text-gray-700 rounded md:p-0 ">Matthew Cheung · Sotware Engineering @ McMaster University</a>
                   </li>
                 </ul>
               </div>
@@ -51,15 +51,17 @@ export default function Home() {
             </div>
           </nav>
 
-          <div className='text-left ml-[200px] p-10'>
-            <h2 className='text-[85px] -ml-[57px] py-2 text-white font-bold'>
-            hi, i'm Matthew Cheung
-            </h2>
-            <h3 className='text-2xl -mt-[7px] mb-[25px] -ml-[53px] text-white '>a Software Engineering student at McMasterU.</h3>
-            
-            <button href="" type="button" className="text-black bg-white hover:bg-transparent hover:text-white border-2 border-white ease-in-out duration-300 shadow-lg font-medium rounded-md text-xl py-3 px-[60px] -ml-[52px]">
-              click to view my resume
-            </button>
+          <div className='text-center py-10'>
+            <div className='inline-block text-left'>
+              <h2 className='text-[85px] py-2 text-white font-bold'>
+              hi, i'm Matthew Cheung
+              </h2>
+              <h3 className='text-2xl -mt-[13px] mb-[20px] text-white '>a Software Engineering student at McMasterU.</h3>
+              
+              <button href="" type="button" className="text-black bg-white hover:bg-transparent hover:text-white border-2 border-white ease-in-out duration-300 shadow-lg font-medium rounded-md text-xl py-3 px-[60px]">
+                click to view my resume
+              </button>
+            </div> 
           </div>
           
         </section>
