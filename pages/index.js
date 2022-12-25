@@ -1,7 +1,7 @@
-import Head from 'next/head';
-import {AiFillMail, AiFillLinkedin, AiFillGithub} from 'react-icons/ai';
-import Image from "next/image";
-import me from "../public/me.jpeg";
+import Head from 'next/head'
+import {AiFillMail, AiFillLinkedin, AiFillGithub} from 'react-icons/ai'
+import Image from "next/image"
+import me from "../public/me.jpeg"
 import tetris from "../public/tetris.png"
 import altera from "../public/altera.jpg"
 import qlabs from "../public/qlabs.png"
@@ -19,7 +19,7 @@ export default function Home() {
       <main id="home" className="bg-white px-10">
         <section className='pt-[140px] pb-[160px] -ml-10 w-screen bg-gradient-to-r from-[#ef6543] to-[#7a8cff] relative top-[72px] left-0 '>
 
-          <nav className="bg-white py-2.5 fixed w-screen -top-1 border-b border-gray-200 backdrop-filter backdrop-blur-md bg-opacity-20">
+          <nav className="bg-white py-2.5 fixed w-screen -top-1 border-b border-gray-200 backdrop-filter backdrop-blur-md bg-opacity-20 block z-10">
             <div className="container flex flex-wrap items-center justify-between mx-auto">
               <div className="flex order-2">
                 <ul className="flex flex-row p-4 px-7 mt-0 space-x-8 text-[15px] font-medium">
@@ -33,11 +33,11 @@ export default function Home() {
                     <a href="#projects" className="block text-gray-700 rounded hover:bg-gray-100 hover:bg-transparent hover:text-blue-700">Projects</a>
                   </li>
                 </ul>
-                  
-                <button type="button" className="text-white bg-[#b9779a] border-2 border-[#b9779a] hover:bg-transparent hover:text-black hover:border-black ease-in-out duration-300 rounded-lg font-medium text-[15px] px-2.5 h-9 mr-3 mt-[9.3px] text-center">
-                Resume
-                </button>
-
+                <a href="MatthewCheungResume.pdf" target="_blank">
+                  <button type="button" className="text-white bg-[#b9779a] border-2 border-[#b9779a] hover:bg-transparent hover:text-black hover:border-black ease-in-out duration-300 rounded-lg font-medium text-[15px] px-2.5 h-9 mr-3 mt-[9.3px] text-center">
+                  Resume
+                  </button>
+                </a>  
               </div>
 
               <div className="items-center justify-between flex w-auto order-1" id="navbar-sticky">
@@ -57,10 +57,11 @@ export default function Home() {
               hi, i'm Matthew Cheung
               </h2>
               <h3 className='text-2xl -mt-[13px] mb-[20px] text-white '>a Software Engineering student at McMasterU.</h3>
-              
-              <button href="" type="button" className="text-black bg-white hover:bg-transparent hover:text-white border-2 border-white ease-in-out duration-300 shadow-lg font-medium rounded-md text-xl py-3 px-[60px]">
-                click to view my resume
-              </button>
+              <a href="MatthewCheungResume.pdf" target="_blank">
+                <button href="" type="button" className="text-black bg-white hover:bg-transparent hover:text-white border-2 border-white ease-in-out duration-300 shadow-lg font-medium rounded-md text-xl py-3 px-[60px]">
+                  click to view my resume
+                </button>
+              </a>
             </div> 
           </div>
           
@@ -74,7 +75,7 @@ export default function Home() {
               
               <div className=' shadow-xl px-5 flex flex-col justify-center'>
                 <h3 className='text-3xl py-5 underline decoration-[4px] decoration-[#b9779a] font-bold'>
-                <a id="about-me" className='absolute top-[630px]'></a>
+                <a id="about-me" className='absolute top-[619px]'></a>
                   About me</h3>
                 
                 <p className='text-lg py-2 leading-8 text-gray-800 '>
@@ -100,7 +101,7 @@ export default function Home() {
             
             <div className='max-w-[1100px] mx-auto grid grid-cols-3 place-items-center'>
               <a id="projects" className='absolute top-[1470px]'></a>
-              <a className="max-w-[260px] rounded-xl overflow-hidden shadow-lg transition duration-[200ms] hover:scale-105 hover:shadow-2xl"
+              <a className="max-w-[260px] rounded-xl overflow-hidden shadow-lg transition duration-[200ms] hover:scale-105 hover:shadow-2xl z-0"
               href="https://github.com/matthewcheung26/tetrisAI" target="_blank">
                 <Image className="w-auto" src={tetris}/> 
                 <div className="px-6 py-4">
@@ -117,8 +118,8 @@ export default function Home() {
                 </div>
               </a>
 
-              <a className="max-w-[260px] rounded-xl overflow-hidden shadow-lg transition duration-[200ms] hover:scale-105 hover:shadow-2xl"
-              href="https://github.com/matthewcheung26/tetrisAI" target="_blank">
+              <a className="max-w-[260px] rounded-xl overflow-hidden shadow-lg transition duration-[200ms] hover:scale-105 hover:shadow-2xl z-0"
+              href="https://github.com/mcheung26/2da4-Verilog-Code" target="_blank">
                 <Image className="w-auto" src={altera}/> 
                 <div className="px-6 py-4">
                   <div className="font-bold text-xl mb-2">Digital Logic Design</div>
@@ -134,7 +135,7 @@ export default function Home() {
                 </div>
               </a>
 
-              <a className="max-w-[260px] rounded-xl overflow-hidden shadow-lg transition duration-[200ms] hover:scale-105 hover:shadow-2xl"
+              <a className="max-w-[260px] rounded-xl overflow-hidden shadow-lg transition duration-[200ms] hover:scale-105 hover:shadow-2xl z-0"
               href="https://www.notion.so/matthewcheung26/Project-2-Summary-daa0b67043a74b77bc604b45e5a252cb" target="_blank">
                 <Image className="w-auto" src={qlabs}/>
                 <div className="px-6 py-4">
@@ -157,11 +158,11 @@ export default function Home() {
 
         <section>
           <div className="w-screen px-4 py-20 -ml-10 space-y-12 overflow-hidden bg-gradient-to-r from-orange-400 to-indigo-400">
-            <div className="text-[70px] text-white flex justify-center mt-8 gap-16">
-              <a href="https://www.linkedin.com/in/mcheung26/" target="_blank"><AiFillLinkedin /></a>
+            <div className="text-[70px] text-white flex justify-center mt-8 gap-16 ">
+              <a className='hover:bg-transparent hover:text-black hover:border-black ease-in-out duration-300' href="https://www.linkedin.com/in/mcheung26/" target="_blank"><AiFillLinkedin /></a>
               
-              <a href="https://github.com/matthewcheung26" target="_blank"><AiFillGithub /></a>
-              <a href="mailto: cheunm23@mcmaster.ca" target="_blank"><AiFillMail /></a>
+              <a className='hover:bg-transparent hover:text-black hover:border-black ease-in-out duration-300' href="https://github.com/mcheung26" target="_blank"><AiFillGithub /></a>
+              <a className='hover:bg-transparent hover:text-black hover:border-black ease-in-out duration-300' href="mailto: cheunm23@mcmaster.ca" target="_blank"><AiFillMail /></a>
             </div>
 
             <p className="text-md leading-6 text-center text-white">
